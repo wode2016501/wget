@@ -4053,6 +4053,7 @@ gethttp (const struct url *u, struct url *original_url, struct http_stat *hs,
       retval = RETRUNNEEDED;
       goto cleanup;
     }
+	contrange=0;
   if ((contrange != 0 && contrange != hs->restval)
       || (H_PARTIAL (statcode) && !contrange && hs->restval))
     {
