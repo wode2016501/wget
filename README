@@ -90,3 +90,15 @@ grants you additional permission to convey the resulting work.
 Corresponding Source for a non-source form of such a combination
 shall include the source code for the parts of OpenSSL used as well
 as that of the covered work.
+
+
+添加了Range头206错误
+
+shell src/wget 192.168.100.123:8080/dev/k  --header "Range: bytes=0-5"
+shell$ cat k
+123456
+shell$ wget 192.168.100.123:8080/dev/k  -c
+shell cat k
+123456789
+
+
